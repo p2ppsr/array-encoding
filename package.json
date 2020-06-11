@@ -1,0 +1,25 @@
+{
+  "name": "@p2ppsr/array-encoding",
+  "version": "0.0.1",
+  "description": "Efficiently encode Uint8Arrays as base64 strings",
+  "main": "build/index.js",
+  "repository": "git+https://github.com/p2ppsr/array-encoding",
+  "author": "Peer-to-Peer Privacy Systems Research LLC",
+  "license": "PROPRIETARY",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c --environment BUILD:production",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "rollup": "^2.15.0",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "dependencies": {
+    "@p2ppsr/standard-errors": "0.0.2"
+  }
+}
