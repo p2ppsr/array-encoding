@@ -5,7 +5,7 @@ export default {
   output: {
     file: 'build/index.js',
     format: 'umd',
-    name: 'CWIValidation'
+    name: 'ArrayEncoding'
   },
   plugins: [
     babel({
