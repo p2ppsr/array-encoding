@@ -10,5 +10,4 @@ const encodeUint8AsString = uint8 => {
   return btoa(String.fromCharCode.apply(null, uint8))
 }
 
-window.encodeUint8AsString = encodeUint8AsString
 export default encodeUint8AsString

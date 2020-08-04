@@ -24,5 +24,4 @@ const decodeUint8FromString = str => {
   }
 }
 
-window.decodeUint8FromString = decodeUint8FromString
 export default decodeUint8FromString
