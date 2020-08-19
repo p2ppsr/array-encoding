@@ -1,6 +1,6 @@
 {
   "name": "@p2ppsr/array-encoding",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Efficiently encode Uint8Arrays as base64 strings",
   "main": "build/index.js",
   "repository": "git+https://github.com/p2ppsr/array-encoding",
@@ -23,6 +23,6 @@
     "rollup-plugin-babel": "^4.4.0"
   },
   "dependencies": {
-    "@p2ppsr/standard-errors": "0.0.2"
+    "@p2ppsr/standard-errors": "^0.0.2"
   }
 }
