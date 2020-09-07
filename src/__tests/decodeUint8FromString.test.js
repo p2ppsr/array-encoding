@@ -1,6 +1,6 @@
 import decodeUint8FromString from '../decodeUint8FromString'
 import encodeUint8AsString from '../encodeUint8AsString'
-import { ValidationError } from '@p2ppsr/standard-errors'
+import { ValidationError } from '@cwi/errors'
 import vectors from './arrayEncoding.vectors'
 
 const CORRECTLY_ENCODED_STRING =

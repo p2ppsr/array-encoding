@@ -1,4 +1,4 @@
-import { ValidationError } from '@p2ppsr/standard-errors'
+import { ValidationError } from '@cwi/errors'
 /**
  * Given a specially-formatted (non-arbitrary) string originally produced 
  * with encodeUint8AsString, returns the Uint8Array that was originally encoded.
