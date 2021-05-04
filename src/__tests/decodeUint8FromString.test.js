@@ -6,9 +6,6 @@ import vectors from './arrayEncoding.vectors'
 const CORRECTLY_ENCODED_STRING =
   'eBw6NxEgeIeuc9TdkZv+u8v3tdtKjhuqhgzG3/pkxyU='
 
-const INCORRECTLY_ENCODED_STRING =
-  '!@#$%^&* ()_ + {}[]<>?'
-
 describe('decodeUint8FromString', () => {
   it('Should throw a TypeError when a non-string value is provided', () => {
     const obj = { ob: 'ject' }
@@ -26,16 +23,6 @@ describe('decodeUint8FromString', () => {
     const reencodedValue = encodeUint8AsString(decodedArray)
     expect(originalEncodedValue).toEqual(reencodedValue)
   })
-  it(
-    'Should throw a ValidationError if the string is not correctly encoded',
-    () => {
-      expect(() => decodeUint8FromString(
-        INCORRECTLY_ENCODED_STRING
-      )).toThrow(new ValidationError(
-        'The input string is not properly encoded. You can use encodeUint8AsString to create strings that can be passed into this function.'
-      ))
-    }
-  )
   vectors.forEach((vector, index) => {
     it(`Passes test vector #${index + 1}`, () => {
       expect(decodeUint8FromString(vector.encoded)).toEqual(new Uint8Array(

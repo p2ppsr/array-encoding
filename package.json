@@ -1,6 +1,6 @@
 {
   "name": "@cwi/array-encoding",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Efficiently encode Uint8Arrays as base64 strings",
   "main": "build/index.js",
   "repository": "git+https://github.com/p2ppsr/array-encoding",
@@ -8,6 +8,7 @@
   "license": "PROPRIETARY",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "build": "rollup -c --environment BUILD:production",
     "prepublishOnly": "npm run build"
   },

@@ -7,7 +7,7 @@ const encodeUint8AsString = uint8 => {
   if (uint8.constructor !== Uint8Array) {
     throw new TypeError('The provided value is not a Uint8Array!')
   }
-  return btoa(String.fromCharCode.apply(null, uint8))
+  return Buffer.from(uint8).toString('base64')
 }
 
 export default encodeUint8AsString

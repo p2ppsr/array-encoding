@@ -10,9 +10,7 @@ const decodeUint8FromString = str => {
     throw new TypeError('Input must be a string!')
   }
   try {
-    return new Uint8Array(
-      atob(str).split('').map(c => c.charCodeAt(0))
-    )
+    return Uint8Array.from(Buffer.from(str, 'base64'))
   } catch (e) {
     if (e instanceof DOMException) {
       throw new ValidationError(
