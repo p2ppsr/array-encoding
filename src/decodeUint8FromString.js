@@ -9,6 +9,11 @@ const decodeUint8FromString = str => {
   if (typeof str !== 'string') {
     throw new TypeError('Input must be a string!')
   }
+  if (
+    !/^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/.test(str)
+  ) {
+    throw new ValidationError('Must be base64')
+  }
   try {
     return Uint8Array.from(Buffer.from(str, 'base64'))
   } catch (e) {
