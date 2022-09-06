@@ -1,6 +1,5 @@
 import decodeUint8FromString from '../decodeUint8FromString'
 import encodeUint8AsString from '../encodeUint8AsString'
-import { ValidationError } from '@cwi/errors'
 import vectors from './arrayEncoding.vectors'
 
 const CORRECTLY_ENCODED_STRING =
@@ -30,7 +29,7 @@ describe('decodeUint8FromString', () => {
     () => {
       expect(() => decodeUint8FromString(
         INCORRECTLY_ENCODED_STRING
-      )).toThrow(new ValidationError(
+      )).toThrow(new Error(
         'Must be base64'
       ))
     }

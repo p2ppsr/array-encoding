@@ -1,6 +1,5 @@
 import decodeUint8FromString from '../decodeUint8FromString'
 import encodeUint8AsString from '../encodeUint8AsString'
-import { ValidationError } from '@cwi/errors'
 import vectors from './arrayEncoding.vectors'
 
 describe('encodeUint8AsString', () => {
@@ -43,4 +42,4 @@ describe('encodeUint8AsString', () => {
       ).toEqual(vector.encoded)
     })
   })
-}) 
+})
