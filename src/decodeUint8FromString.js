@@ -8,10 +8,10 @@ const decodeUint8FromString = (str, format = 'base64') => {
   if (typeof str !== 'string') {
     throw new TypeError('Input must be a string!')
   }
+  if (format !== 'base64' && format !== 'hex') {
+    throw new TypeError('Input must be formatted as a base64 or hex string!')
+  }
   if (str.length < 50000) {
-    if (format !== 'base64' && format !== 'hex') {
-      throw new TypeError('Input must be formatted as a base64 or hex string!')
-    }
     if (
       format === 'base64' && !/^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/.test(str)
     ) {
