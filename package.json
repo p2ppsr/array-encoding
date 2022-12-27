@@ -2,7 +2,7 @@
   "name": "cwi-array-encoding",
   "version": "0.1.7",
   "description": "Efficiently encode Uint8Arrays as base64 strings",
-  "main": "build/index.js",
+  "main": "dist/array-encoding.js",
   "repository": "git+https://github.com/p2ppsr/array-encoding",
   "author": "Peer-to-Peer Privacy Systems Research LLC",
   "license": "Open BSV License",
