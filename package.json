@@ -1,5 +1,5 @@
 {
-  "name": "@cwi/array-encoding",
+  "name": "cwi-array-encoding",
   "version": "0.1.8",
   "description": "Efficiently encode Uint8Arrays as base64 strings",
   "main": "dist/array-encoding.js",
